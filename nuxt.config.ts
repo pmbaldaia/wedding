@@ -22,18 +22,23 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: "GDCSS Castelões",
+      title: "Ana & Henrique - O Nosso Casamento",
       link: [{ rel: "icon", type: "image/png", href: "/favicon.ico" }],
       meta: [
-        { name: "description", content: "Site oficial do GDCSS Castelões" },
-        { property: "og:title", content: "GDCSS Castelões" },
+        {
+          name: "description",
+          content:
+            "Junta-te a Ana & Henrique para celebrar o dia mais especial das suas vidas! Confirma a tua presença e fica a par de todos os detalhes.",
+        },
+        { property: "og:title", content: "Ana & Henrique - Casamento 2025" },
         {
           property: "og:description",
-          content: "Site oficial do GDCSS Castelões",
+          content:
+            "Junta-te a Ana & Henrique para celebrar o dia mais especial das suas vidas! Confirma a tua presença e fica a par de todos os detalhes.",
         },
-        { property: "og:image", content: "/favicon.ico" },
+        { property: "og:image", content: "/assets/img/casal.png" },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: "https://gdcsscasteloes.pt" },
+        { property: "og:url", content: "https://anaehenrique.pt" },
       ],
     },
   },
