@@ -22,23 +22,23 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: "Ana & Henrique - O Nosso Casamento",
+      title: "Rita & Pedro — O Nosso Casamento",
       link: [{ rel: "icon", type: "image/png", href: "/favicon.ico" }],
       meta: [
         {
           name: "description",
           content:
-            "Junta-te a Ana & Henrique para celebrar o dia mais especial das suas vidas! Confirma a tua presença e fica a par de todos os detalhes.",
+            "Rita & Pedro vão casar a 29 de abril de 2028. Descobre todos os detalhes do nosso dia.",
         },
-        { property: "og:title", content: "Ana & Henrique - Casamento 2025" },
+        { property: "og:title", content: "Rita & Pedro — Casamento 2028" },
         {
           property: "og:description",
           content:
-            "Junta-te a Ana & Henrique para celebrar o dia mais especial das suas vidas! Confirma a tua presença e fica a par de todos os detalhes.",
+            "Rita & Pedro vão casar a 29 de abril de 2028. Descobre todos os detalhes do nosso dia.",
         },
-        { property: "og:image", content: "/assets/img/casal.png" },
+        { property: "og:image", content: "/logo-casamento.png" },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: "https://anaehenrique.pt" },
+        
       ],
     },
   },

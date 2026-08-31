@@ -2,16 +2,124 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
-  }
-  #__nuxt,
-  #__layout {
-    min-height: 100%;
-  }
+:root{--ivory:#f7f3eb;--paper:#fcfaf5;--ink:#243229;--sage:#647867;--deep:#344b3a;--gold:#a38a63;--line:#d9d4ca}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif;-webkit-font-smoothing:antialiased}
+button,a{-webkit-tap-highlight-color:transparent}
+.wedding-page{overflow:hidden;min-width:0}
+.section-pad{padding:110px 24px}
+
+.hero{min-height:100svh;display:grid;place-items:center;position:relative;background:radial-gradient(circle at 50% 38%,#fff 0,#faf7f0 48%,#eee8dc 100%);isolation:isolate;padding:24px}
+.hero:after{content:"";position:absolute;inset:22px;border:1px solid rgba(52,75,58,.28);pointer-events:none}
+.hero-inner{text-align:center;z-index:2;width:min(850px,100%);padding:70px 0 54px;position:relative}
+.eyebrow,.label{font-family:Arial,sans-serif;letter-spacing:.24em;font-size:11px;text-transform:uppercase}
+.wedding-logo{width:150px;height:150px;object-fit:contain;margin:18px auto 20px;mix-blend-mode:multiply;display:block}
+.pretitle{font-size:16px;margin:0 0 10px;color:#59645d;font-style:italic}
+.hero h1{font-size:clamp(62px,10vw,126px);line-height:.9;font-weight:400;margin:0;letter-spacing:-.055em;white-space:nowrap}
+.hero h1 span{font-style:italic}
+.hero h1 b{font-size:.34em;font-weight:400;color:var(--gold);vertical-align:middle;margin:0 .18em}
+.date-lockup{display:flex;justify-content:center;align-items:center;gap:24px;margin:45px auto 16px}
+.date-lockup span{font-family:Arial,sans-serif;font-size:11px;line-height:1.6;letter-spacing:.2em;min-width:82px}
+.date-lockup strong{font-size:64px;font-weight:400;line-height:1;border-left:1px solid var(--sage);border-right:1px solid var(--sage);padding:0 26px;color:var(--deep)}
+.hero-time{font:11px Arial,sans-serif;letter-spacing:.25em}
+.scroll-cue{border:0;background:none;margin-top:50px;color:var(--ink);cursor:pointer;min-width:70px;min-height:48px;padding:8px}
+.scroll-cue span{display:block;font:9px Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase}
+.scroll-cue i{display:block;font-style:normal;font-size:22px;margin-top:8px;animation:bob 1.8s infinite}
+.botanical{position:absolute;width:320px;height:520px;opacity:.45;z-index:0;pointer-events:none}
+.botanical span{position:absolute;width:2px;height:470px;background:var(--sage);left:50%;top:15px;transform:rotate(25deg);transform-origin:bottom}
+.botanical i{position:absolute;width:82px;height:34px;border:1.5px solid var(--sage);border-radius:100% 0 100% 0;transform:rotate(20deg)}
+.botanical i:nth-child(2){top:120px;left:105px}.botanical i:nth-child(3){top:200px;left:170px;transform:scaleX(-1) rotate(10deg)}.botanical i:nth-child(4){top:290px;left:70px}.botanical i:nth-child(5){top:365px;left:150px;transform:scaleX(-1) rotate(15deg)}
+.botanical-a{left:-85px;bottom:-110px;transform:rotate(-28deg)}.botanical-b{right:-95px;top:-80px;transform:rotate(145deg) scale(.85)}
+
+.intro{text-align:center;max-width:900px;margin:auto}
+.script{font-size:20px;font-style:italic;color:var(--gold);margin:0 0 22px}
+.intro h2,.save-date h2,.rsvp h2{font-weight:400;font-size:clamp(36px,5vw,62px);line-height:1.08;margin:0 auto 28px}
+.intro>p:not(.script){font-size:17px;line-height:1.8;max-width:650px;margin:auto;color:#667069}
+.countdown-wrap{margin:58px auto 0;width:min(100%,540px);text-align:center}
+.countdown-kicker{font:10px Arial,sans-serif!important;text-transform:uppercase;letter-spacing:.24em!important;color:#7b847d!important;margin:0 0 16px!important}
+.countdown-primary{margin:0 auto;display:flex;flex-direction:column;width:190px;height:190px;border:1px solid #a9b1a9;border-radius:50%;justify-content:center;position:relative;background:rgba(255,255,255,.32)}
+.countdown-primary:after{content:"";position:absolute;inset:7px;border:1px solid rgba(163,138,99,.28);border-radius:50%;pointer-events:none}
+.countdown-primary strong{font-size:54px;font-weight:400;color:var(--deep);line-height:1}
+.countdown-primary span{font:9px Arial,sans-serif;text-transform:uppercase;letter-spacing:.16em;max-width:118px;margin:8px auto 0;line-height:1.5}
+.countdown-details{display:flex;justify-content:center;align-items:flex-start;gap:15px;margin-top:26px}
+.countdown-details div{min-width:62px}
+.countdown-details strong{display:block;font-size:24px;font-weight:400;line-height:1;color:var(--deep);font-variant-numeric:tabular-nums}
+.countdown-details span{display:block;margin-top:7px;font:8px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#737e76}
+.countdown-details i{font-style:normal;color:#b4aa99;font-size:18px;line-height:1;margin-top:2px}
+.countdown-message{font-size:28px!important;color:var(--deep)!important;font-style:italic}
+
+.details{background:var(--deep);color:#f7f3eb}
+.section-heading{text-align:center;margin-bottom:70px}.section-heading span{font:10px Arial,sans-serif;letter-spacing:.2em;color:#c9b99e}.section-heading p{font-style:italic;color:#c9b99e}.section-heading h2{font-weight:400;font-size:clamp(40px,6vw,72px);margin:10px 0}
+.detail-grid{max-width:980px;margin:auto;display:grid;grid-template-columns:1fr 100px 1fr;align-items:center}
+.detail-card{text-align:center;padding:55px 35px;border:1px solid rgba(247,243,235,.28);min-height:390px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.line-icon{font-size:30px;color:#c9b99e}.detail-card .label{color:#c9b99e;margin:18px 0 14px}.detail-card h3{font-weight:400;font-size:29px;line-height:1.25;margin:0 0 18px}.detail-card h3 em{font-size:17px;font-weight:400;color:#c9b99e}.detail-card p:not(.label){font-size:14px;line-height:1.7;color:#d9ded9}.detail-card a{margin-top:18px;color:#f7f3eb;text-decoration:none;border-bottom:1px solid #9da99f;padding:12px 4px 7px;font:10px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.connector{display:flex;flex-direction:column;align-items:center;gap:14px;color:#c9b99e;font-style:italic}.connector span{height:70px;width:1px;background:#89968b}.connector b{font-weight:400;font-size:13px}
+
+.save-date{text-align:center;background:#e9e3d7;position:relative}.mini-leaf{font-size:48px;color:var(--sage);transform:rotate(-15deg)}.save-date .eyebrow{margin-top:20px}.save-date p:not(.eyebrow){color:#68736b}.save-date button{margin-top:22px;border:1px solid var(--deep);background:transparent;padding:15px 24px;min-height:48px;font:10px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--deep);cursor:pointer;transition:.25s}
+@media(hover:hover) and (pointer:fine){.save-date button:hover{background:var(--deep);color:white}.detail-card a:hover{border-color:#f7f3eb}}
+.rsvp{text-align:center}.rsvp>p:not(.script){font:11px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#6f776f}.rsvp strong{display:block;font-size:38px;font-weight:400;margin-top:14px;color:var(--deep)}
+footer{text-align:center;padding:70px 20px;background:#f2eee5;border-top:1px solid #ded8cc}footer img{width:90px;height:90px;object-fit:contain;mix-blend-mode:multiply}footer p{font-size:25px;margin:12px 0 5px;font-style:italic}footer p span{color:var(--gold)}footer small{font:9px Arial,sans-serif;letter-spacing:.25em}
+
+@keyframes bob{50%{transform:translateY(7px)}}
+
+@media(max-width:760px){
+  .section-pad{padding:76px 20px}
+  .hero{min-height:100svh;padding:16px}
+  .hero:after{inset:10px}
+  .hero-inner{padding:54px 8px 42px;width:100%}
+  .eyebrow,.label{font-size:9px;letter-spacing:.19em}
+  .hero .eyebrow{max-width:260px;margin:0 auto;line-height:1.65}
+  .wedding-logo{width:112px;height:112px;margin:13px auto 16px}
+  .pretitle{font-size:14px;margin-bottom:10px}
+  .hero h1{font-size:clamp(49px,16vw,68px);letter-spacing:-.06em;white-space:normal;display:flex;justify-content:center;align-items:center;gap:8px}
+  .hero h1 b{font-size:.36em;margin:0}
+  .date-lockup{gap:7px;margin:32px auto 14px;width:100%;max-width:310px}
+  .date-lockup span{min-width:62px;font-size:8px;letter-spacing:.14em}
+  .date-lockup strong{font-size:49px;padding:0 15px}
+  .hero-time{font-size:9px;letter-spacing:.2em}
+  .scroll-cue{margin-top:32px}
+  .botanical{opacity:.18;transform-origin:center}
+  .botanical-a{left:-170px;bottom:-160px;transform:rotate(-28deg) scale(.72)}
+  .botanical-b{right:-175px;top:-150px;transform:rotate(145deg) scale(.62)}
+
+  .script{font-size:18px;margin-bottom:18px}
+  .intro h2,.save-date h2,.rsvp h2{font-size:clamp(32px,10vw,41px);line-height:1.1;margin-bottom:22px}
+  .intro>p:not(.script){font-size:15px;line-height:1.75}
+  .countdown-wrap{margin-top:48px}
+  .countdown-primary{width:166px;height:166px}
+  .countdown-primary strong{font-size:47px}
+  .countdown-primary span{font-size:8px}
+  .countdown-details{gap:10px;margin-top:22px}
+  .countdown-details div{min-width:54px}
+  .countdown-details strong{font-size:22px}
+
+  .section-heading{margin-bottom:42px}
+  .section-heading h2{font-size:42px;letter-spacing:-.03em}
+  .detail-grid{grid-template-columns:1fr;gap:0;width:100%;max-width:430px}
+  .detail-card{min-height:0;padding:42px 22px;border-color:rgba(247,243,235,.23)}
+  .detail-card h3{font-size:26px}
+  .detail-card h3 em{font-size:15px}
+  .detail-card p:not(.label){font-size:13px}
+  .detail-card a{width:100%;max-width:230px;margin-top:14px}
+  .connector{height:82px;justify-content:center;gap:9px}
+  .connector span{height:18px}
+
+  .save-date button{width:100%;max-width:310px;padding:16px 18px}
+  .rsvp h2 br{display:none}
+  .rsvp strong{font-size:29px;letter-spacing:.02em}
+  footer{padding:54px 20px}
+  footer img{width:78px;height:78px}
 }
+
+@media(max-width:370px){
+  .section-pad{padding-left:16px;padding-right:16px}
+  .hero h1{font-size:46px;gap:5px}
+  .date-lockup{max-width:285px}
+  .date-lockup span{min-width:54px;font-size:7.5px}
+  .date-lockup strong{font-size:44px;padding:0 12px}
+  .countdown-details{gap:7px}
+  .countdown-details div{min-width:48px}
+}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scroll-cue i{animation:none}}
