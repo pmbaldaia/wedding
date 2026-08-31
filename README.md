@@ -1,42 +1,22 @@
-# 💛 Ana & Henrique – O Nosso Grande Dia 💛
+# Rita & Pedro — Convite Digital
 
----
+Convite digital do casamento de Rita & Pedro, marcado para 29 de abril de 2028.
 
-### Olá, querido convidado virtual! 👋
+## Executar
 
-Se estás aqui, parabéns! Acabas de entrar no universo mágico onde a **Ana & o Henrique** se preparam para dizer “SIM” para a vida toda — com direito a muitas gargalhadas, dança até os pés pedirem descanso e, claro, muito amor dourado para iluminar tudo! ✨
+```bash
+npm install
+npm run dev
+```
 
----
+## Estrutura
 
-## O que é este projeto?
+O projeto foi reduzido ao essencial:
 
-Este é o site oficial do nosso casamento, feito com muito carinho, código e umas pitadas de nervosismo pré-cerimónia. Aqui vais poder:
+- `pages/index.vue` — convite e countdown em JavaScript/Vue
+- `assets/css/main.css` — estilos e versão responsiva/mobile
+- `public/logo-casamento.png` — monograma
+- `public/favicon.ico` — favicon
+- `app.vue` e `nuxt.config.ts` — configuração mínima do Nuxt
 
-- Confirmar a tua presença (por favor, diz que vais! 😅)
-- Ver todos os detalhes para não perderes nenhum momento especial
-- Aceder a links importantes (políticas, contactos e muito mais)
-- Seguir as nossas redes sociais e entrar no espírito antes do grande dia
-
----
-
-## Quer ajudar?
-
-Aceitamos *convidados especiais* para sugestões, designs fofos ou mesmo dicas de dança para o dia. Só não prometemos ensinar passos! 😄
-
----
-
-## Agradecimentos
-
-Um super obrigado a todos os que fazem parte desta aventura — desde os nossos pais até aquele tio que promete cantar na festa (prepara-te!). E claro, a ti que estás a ler isto agora! 💛
-
----
-
-Feito com 💛, glitter e muito amor por **Ana & Henrique**.
-
----
-
-**PS:** Se aparecer algum bug, prometemos que foi só emoção!
-
----
-
-Queremos ver-te na festa! 🎊
+Não existem componentes, layouts, stores, páginas legais ou dependências antigas sem utilização.
